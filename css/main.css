@@ -148,14 +148,15 @@
     background: var(--white-color);
     color: #990820;
     border-color: transparent;
-	transition: all .3s ease;
+  	transition: all .3s ease;
   }
   
   .custom-btn:hover,
   .custom-btn:focus {
     background: #990820;
-    color: #7c777985;
-    border-color: #7c777985;
+    color: #f7f7f7;
+    transition: all 0.75s;
+    border-color: #7c7779be;
   }
 
 
@@ -243,7 +244,7 @@
 
   .nav-link.active,
   .nav-link:hover {
-    color: #7c777985;
+    color: #c2babdfd;
   }
 
   .navbar-expand-lg .navbar-nav .nav-link {
@@ -252,17 +253,20 @@
   }
 
   .navbar-expand-lg .navbar-nav .nav-link.contact {
-    border: 2px solid #7c777985;
+    border: 2px solid #7c77796b;
     border-radius: var(--border-radius-large);
     color: var(--white-color);
     font-family: var(--font-bold-family);
     padding: 0.6em 2em 0.8em 2em;
+    transition: all 0.75s;
+
   }
 
   .navbar-expand-lg .navbar-nav .nav-link.contact:hover,
   .navbar-expand-lg .navbar-nav .nav-link.contact.active {
-    background: #7c777985;
+    background: #f7f7f7;
     color: #990820;
+    transition: all 0.75s;
   }
 
   .navbar-nav .navbar-toggler-icon {
@@ -722,10 +726,11 @@
 
 .projectimg {
   border-radius: 5%;
+  border: solid 1px #990820 ;
 }
 
 .card {
-  background-color: #7c777985;
+  background-color: #7c77796b;
   align-items: center;
 }
 
@@ -739,11 +744,33 @@
 }
 
 .card-image {
-  height: 40% !important;
-  width: 40% !important;
-  transition: all 1s;
+  transition: all 0.75s;
+  margin-top: 30px;
 }
 
 .card-image:hover{
   transform: scale(1.5);
+}
+
+@media screen and (min-width: 991px) {
+
+  .card-image {
+    height: 40% !important;
+    width: 40% !important;
+  }
+  .pythonimg{
+    height: 40% !important;
+    width: 69% !important;
+  }
+
+}
+
+@media screen and (max-width: 991px) {
+
+  .card-image {
+    width: 30%;
+  }
+  .card-image:hover{
+    transform: scale(1.25);
+  }
 }
